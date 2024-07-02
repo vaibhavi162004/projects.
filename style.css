@@ -2,56 +2,72 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
-    background-color: #e0f7fa;
+    height: 100vh;
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    background-image: url(https://res-console.cloudinary.com/ddsuwbdq8/thumbnails/v1/image/upload/v1719906992/NDIwNTk4Nl9iNnlpazk=/preview);
+    background-image: url(https://res-console.cloudinary.com/ddsuwbdq8/thumbnails/v1/image/upload/v1719905807/YWJzdHJhY3QtdXYtdWx0cmF2aW9sZXQtbGlnaHQtY29tcG9zaXRpb25feDFqbDZq/preview);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.weather-app {
+.game {
     text-align: center;
-    background-image: linear-gradient(rgb(246, 249, 60),rgb(248, 222, 169));
-    padding: 20px;
-    border:1px solid rgba(10, 10, 10, 0.3);
-    border-radius: 50%;
-    box-shadow: 0 0 100px rgba(10, 10, 10, 0.1);
-    height: 310px;
-    position: relative;
-    margin-left: 26%;
-    margin-top: -18%;
 }
 
-.weather-app h1{
-    color: rgb(30, 43, 43);
-    border: #050606;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    margin-top: 126%;
+    position: relative;
 }
-input, button {
-    font-size: 16px;
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #e74444;
+    box-shadow: 2px 1px 1px 2px white;
+    color: #f0f0f0;
 }
 
 button {
-    background-color: #02464a;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    color:whitesmoke;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10%;
+    background-image: linear-gradient(rgb(1, 36, 35),rgb(253, 47, 198));
+}
+ button:hover{
+   zoom:1.02;
+   border: 03px solid white;
+ }
+p {
+    border: 2px solid rgb(35, 16, 16);
+    background-image: linear-gradient(rgb(76, 201, 221),rgb(244, 68, 9));
+    font-size:30px;
+    font-weight: bold;
+    color: rgb(1, 7, 13);
+    
 }
 
-button:hover {
-    background-color: #0277bd;
+ span{
+    color:white;
+    margin-bottom:1px;
+    font-size: 20px;
 }
-
-.hidden {
-    display: none;
-}
-
-.weather-app p:hover{
-    zoom:1.2;
+h1{
+    margin-top:10px;
+    color: #f0f0f0;
+    font-size: 50px;
+    border-bottom: ridge rgb(233, 71, 71) ;
+    
 }

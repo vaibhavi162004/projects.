@@ -1,41 +1,74 @@
-const apiKey = 'e06bf95fc0c685d1a27eb3b4083815ee';
-const searchBtn = document.getElementById('searchBtn');
-const locationInput = document.getElementById('locationInput');
-const weatherResult = document.getElementById('weatherResult');
-const locationName = document.getElementById('locationName');
-const temperature = document.getElementById('temperature');
-const humidity = document.getElementById('humidity');
-const condition = document.getElementById('condition');
+const board = document.getElementById('board');
+const resetBtn = document.getElementById('resetBtn');
+const message = document.getElementById('message');
+const playWithAI = document.getElementById('playWithAI');
 
-searchBtn.addEventListener('click', () => {
-    const location = locationInput.value;
-    if (location) {
-        getWeather(location);
-    } else {
-        alert('Please enter a location');
+let cells = [];
+let currentPlayer = 'X';
+let gameActive = true;
+
+const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+
+function initializeGame() {
+    cells = Array(9).fill(null);
+    board.innerHTML = '';
+    cells.forEach((cell, index) => {
+        const cellElement = document.createElement('div');
+        cellElement.classList.add('cell');
+        cellElement.addEventListener('click', () => handleCellClick(index));
+        board.appendChild(cellElement);
+    });
+    message.textContent = `Player ${currentPlayer}'s turn`;
+    gameActive = true;
+}
+
+function handleCellClick(index) {
+    if (cells[index] || !gameActive) return;
+
+    cells[index] = currentPlayer;
+    board.children[index].textContent = currentPlayer;
+
+    if (checkWin()) {
+        gameActive = false;
+        message.textContent = `It'z ${currentPlayer} win!`;
+        return;
     }
-});
 
-async function getWeather(location) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Location not found (status code: ${response.status})`);
-        }
-        const data = await response.json();
-        console.log('API Response:', data); // Log the entire API response
-        displayWeather(data);
-    } catch (error) {
-        console.error('Error:', error);
-        alert(error.message);
+    if (cells.every(cell => cell)) {
+        gameActive = false;
+        message.textContent = 'It\'s a tie!';
+        return;
+    }
+
+    currentPlayer = currentPlayer === 'X' ? 'Y' : 'X';
+    message.textContent = `Player ${currentPlayer}'s turn`;
+
+    if (playWithAI.checked && currentPlayer === 'X') {
+        aiMove();
     }
 }
 
-function displayWeather(data) {
-    locationName.textContent = `${data.name}, ${data.sys.country}`;
-    temperature.textContent = `Temperature: ${data.main.temp}°C`;
-    humidity.textContent = `Humidity: ${data.main.humidity}%`;
-    condition.textContent = `Condition: ${data.weather[0].description}`;
-    weatherResult.classList.remove('hidden');
+function checkWin() {
+    return winningConditions.some(condition => {
+        return condition.every(index => cells[index] === currentPlayer);
+    });
 }
+
+function aiMove() {
+    let emptyCells = cells.map((cell, index) => cell === null ? index : null).filter(val => val !== null);
+    let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+    handleCellClick(randomIndex);
+}
+
+resetBtn.addEventListener('click', initializeGame);
+
+initializeGame();
