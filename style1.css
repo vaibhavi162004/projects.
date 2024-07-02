@@ -1,0 +1,1063 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	font-family: "Roboto", sans-serif;
+	list-style: none;
+	text-decoration: none;
+	color: #E1E0E0;
+	scroll-behavior: smooth;
+
+}
+
+body {
+	background: #3d3d3d;
+}
+
+header {
+	background: #333;
+	position:fixed;
+	width:100%;
+	z-index: 1;
+}
+
+.container{
+	max-width: 1300px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	justify-content: center;
+}
+
+.logo{
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+nav {
+	flex: 1;
+	text-align: right;
+}
+
+nav ul{
+	display: inline-block;
+}
+
+nav ul li{
+	display: inline-block;
+	
+}
+
+nav ul li a{
+	color: white;
+	padding: 10px 20px;
+	border-radius: 15px;
+	transition: ease all 0.3s;
+}
+
+nav ul li a:hover{
+	box-shadow: 0 0px 15px #18dcff;
+}
+
+nav ul li a:active{
+	box-shadow: 0 0px 15px #fffa65;
+}
+
+.menu-icon{
+	color: white;
+	width: 28px;
+	margin-left: 20px;
+	display: none;
+}
+
+.menu-icon i{
+	color: white;
+	padding: 10px 20px;
+	transition: ease all 0.3s;
+	border-radius: 15px;
+}
+
+
+.menu-icon i:hover{
+	
+	background:#00cec9;
+}
+.menu-icon i:active{
+	box-shadow: 0 0px 15px #00cec9 ;
+}
+
+/*------------------ Banner Section CSS Start----------------------*/
+
+.banner{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5% 0;
+	
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 5% 10%; 
+	
+}
+
+.col-2 {
+	flex-basis: 50%;
+	min-width: 300px;
+	
+}
+
+.col-2 h1{
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+
+.col-2 h3{
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 10px;
+}
+
+.col-2 h3 span {
+	margin-bottom: 10px;
+	color: #0984e3;
+}
+
+.col-2 p{
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: justify;
+	margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+.social-media ul {
+	display: flex;
+}
+
+
+
+.social-media ul li a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 42px;
+	height: 42px;
+	border: 2px solid #0984e3;
+	border-radius: 50%;
+	color: #0984e3;
+	text-decoration: none;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: all ease 0.3s;
+}
+
+.social-media ul li a:hover{
+	box-shadow: 0 0 15px #0984e3;
+	color: #1f242d;
+	background:#0984e3;
+}
+
+.download-btn {
+	background: rgba(0,0,0,0);
+	width: 200px;
+	color:#0984e3;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 20px;
+	border: 2px solid #0984e3;
+	border-radius: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: all ease 0.3s;
+}
+
+.download-btn:hover {
+	box-shadow: 0 0 15px #0984e3;
+}
+
+.download-btn:active {
+            background-color: #81ecec;
+        }
+
+.active-btn {
+            background-color: #81ecec;
+        }
+
+.col-2 img{
+	width:90%;
+	animation: floatImage 3s ease-in-out infinite;
+
+}
+
+@keyframes floatImage {
+	
+	0% {transform: translateY(0);}
+	
+	50% {transform: translateY(-10px);}
+	
+	100% {transform: translateY(0);}
+}
+
+/*------------------ Banner Section CSS End----------------------*/
+
+/*------------------------- About-CSS Value- Start--------------------- */
+
+
+.about .row{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.about .row .about-col-1{
+	flex-basis: 35%;
+}
+
+.about .row .about-col-1 img {width: 35vw;
+	animation: floatImage 3s ease-in-out infinite;
+  }
+
+@keyframes floatImage {
+	
+	0% {transform: translateY(0);}
+	
+	50% {transform: translateY(-10px);}
+	
+	100% {transform: translateY(0);}
+	
+}
+
+.about .row .about-col-2{
+	flex-basis: 50%;
+}
+
+.about .row .about-col-2 h1 {
+	font-size: 45px;
+	margin-bottom: 10px;
+}
+
+.about .row .about-col-2 h3 {
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 10px;
+}
+
+.about .row .about-col-2 p {
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+
+.about .row .about-col-2 .tab-titles{
+	display: flex;
+	margin: 20px 0 40px;
+}
+
+.about .row .about-col-2 .tab-links{
+	margin-right: 50px;
+	font-size: 18px;
+	font-weight: 600px;
+	cursor: pointer;
+	position: relative;
+	transition: all ease 0.5s;
+}
+
+.tab-links:hover{
+	color:#00cec9;
+	 
+}
+
+.tab-links::after{
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #ff004f;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: all ease .5s;
+}
+
+.tab-links.active-link::after{
+	width: 50%;
+}
+
+.tab-contents ul li{
+	list-style: none;
+	margin: 10px 0;
+}
+
+.tab-contents ul li span {
+	color:#00cec9 ;
+	font-size: 14px;
+}
+
+.tab-contents{
+	display: none;
+	opacity: 0;
+	transition: all ease 0.8s;
+}
+
+
+
+.tab-contents.active-tab{
+	display: block;
+	opacity: 1;
+}
+
+
+/*------------------------- About-CSS Value- End--------------------- */
+
+
+/* -------------------------Services Value- Start--------------------- */
+
+#Services {
+	padding:  10% 10%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.myservices{
+	padding-bottom: 30px;
+}
+
+ .service-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction:column;
+}
+#service.service-conatiner h1{
+	
+	text-align:center;
+     font-size:45px;
+     color:white;
+	
+	
+}
+.services-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list2 {
+	margin-top: 30px;
+}
+
+.services-content{
+	padding: 5px;
+	flex-basis:35%;
+	height: 400px;
+	margin-right:25px;
+	
+	border-radius: 30px;
+	
+	transition: all ease 0.8s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.services-content:hover{
+	box-shadow: 0px 0px 10px 0px #34e7e4;
+}
+
+.services-content p{
+	text-align: justify;
+}
+
+
+
+
+
+
+
+/*-------------------------- Services Value - End-------------------------*/
+
+
+/*-------------------------- Skill  CSS Value - Start-------------------------*/
+
+
+
+
+#Skills{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 100px;
+}
+
+#Skills .Skill-title {
+	font-size: 45px;
+}
+
+.My-Skills-Content{
+	width: 100%;
+	display: flex;
+	justify-content:space-around ;
+	align-items:center ;
+	
+}
+
+
+.Digital-skills{
+	width: 50%;
+	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+
+.Digital-skills .Skill-sub-title{
+	color: white;
+	font-size: 25px;
+}
+
+
+.Digital-skills .skills{
+	width: 100%;
+	max-width: 600px;
+}
+
+.Digital-skills .skills h1{
+	color: white;
+	clear: both;
+	text-align: center;
+	width: 100%;
+	margin: 20px auto;
+
+}
+
+.Digital-skills .skills .skill-name{
+	font-size: 12px;
+	font-weight: 600;
+	color: white;
+	margin: 20px 0;
+}
+
+.Digital-skills .skills .skill-bar{
+	height: 4px;
+	background:#00000D ;
+	border-radius: 3px;
+}
+
+.Digital-skills .skills .skill-per{
+	height: 4px;
+	background: #12CBC4;
+	border-radius: 3px;
+	position: relative;
+	animation: fillbars 9.5s 1;
+	box-shadow: 0 0 5px 1px #0652DD;
+}
+
+
+.Digital-skills .skills .skill-per::before{
+	content: attr(per);
+	position: absolute;
+	padding: 4px 6px;
+	background: #f1f1f1;
+	border-radius: 4px;
+	font-size: 12px;
+	top: -35px;
+	right: 0;
+	transform: translateX(50%);
+	color: #333;
+}
+
+.Digital-skills .skills .skill-per::after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #f1f1f1;
+	top: -20px;
+	right: -5px;
+	transform: translateX(-50%) rotate(45deg);
+	border-radius: 2px;
+}
+
+@keyframes fillbars{
+	from{
+		width: 0;
+	}
+	to{
+		width: 100%;
+	}
+}
+#Skills.personal-skills{
+	display: flex;
+	justify-content:center;
+	align-items:center ;
+	flex-direction: column;
+	width: 50%;
+	margin-top:80px;
+}
+.personal-skills{
+	width: 50%;
+	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+
+.personal-skills .Skill-sub-title{
+	color: white;
+	font-size: 25px;
+}
+
+
+.personal-skills h3{
+	font-size:25px;
+}
+
+.personal-skills .wrap-container{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.personal-skills .container{
+	width: 200px;
+	padding: 0px 0;
+	border-radius: 10px;
+	margin-top: 50px;
+	gap:50px;
+	row-gap: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.personal-skills .circular-progress-bar{
+	position: relative;
+	height: 100px;
+	width: 100px;
+	background: conic-gradient(#e17055 150.6deg, #dfe6e9 0deg);
+	border-radius: 50%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.personal-skills .circular-progress-bar::before{
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: #333;
+	
+}
+
+
+
+
+.personal-skills .progress-value{
+	position: relative;
+	font-size: 22px;
+	font-weight: 400;
+	color: white;
+	
+}
+
+.personal-skills .per-text1{
+	font-size: 22px;
+	font-weight: 400;
+	color: white;
+	margin-top: -20px;
+	
+}
+/*-------------------------- Skill  CSS Value - end-------------------------*/
+
+/* ---------------------grid works gallery-CSS Value- Start --------------*/
+
+
+
+.grid-wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+	margin-top:50px;
+}
+
+.works-content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+
+.works-content h1{
+	font-size: 40px;
+	margin-top: 80px;
+}
+
+.filter-buttons{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-buttons .filter-button{
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.filter-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.filter-buttons .filter-button:hover{
+	border-bottom: 2px solid white;
+}
+
+.grid-gallery {
+  width: 100%;
+	margin: 20px auto;
+	columns: 4;
+  grid-gap: 20px;
+	padding: 0 10%;
+}
+
+.grid-gallery .grid-item {
+  width: 100%;
+	margin-bottom: 20px;
+	transition: all ease 0.3s;
+}
+
+.grid-gallery .grid-item img {
+  max-width: 100%;
+ border-radius: 15px;
+}
+
+.grid-gallery .grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-gallery .grid-item a {
+  cursor: zoom-in;
+}
+
+.grid-gallery .grid-item:nth-child(3n - 2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Let's make it responsive */
+@media (max-width: 800px) {
+	
+	.works-content h1{
+	
+	margin-bottom: 0px;	
+}
+	
+	.filter-buttons .filter-button{
+		padding: 10px 10px;
+	}
+	
+  .grid-gallery {
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;*/
+	  columns: 3;
+	  padding: 0 5%;
+  }
+
+  .grid-gallery .grid-item:nth-child(3n - 2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
+/*---------------------- grid works gallery-CSS Value- End------------------*/
+
+
+/*-------------media query for menu  800px-----------*/
+
+@media only screen and (max-width: 800px){
+	
+	.menu-icon{
+	cursor: pointer;
+	display: block;
+    }
+	
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+	
+	nav ul li{
+		display: block;
+		margin: 10px 50px 10px 0;
+	}
+	
+	nav ul li a{
+		color: white;
+	}
+	
+	
+	
+	.row{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.col-2{
+		flex-basis: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.col-2 img{
+		width: 45vw;
+	}
+	
+	.col-2 h1, h3, p{
+		text-align: center;
+	}
+	
+	.col-2 .social-media ul{
+		display: flex;
+		justify-content: center;
+	}
+	
+	.col-2 .download-btn{
+		width: 100%;
+		margin: 20px auto;
+	}
+	
+	
+	.col-3{
+		height: 250px;
+		min-width: 200px;
+
+	}
+	
+	.about-col-1{
+		display: none;
+	}
+	
+	.about-col-2 .sub-title{
+		text-align: center;
+		flex-basis: 100%;
+	}
+	
+	.about .row .about-col-2 p{
+		text-align: center;
+		flex-basis: 100%;
+
+	}
+	
+	#service.services-container.service-list.services-content{
+		flex-basis:25%;
+	}
+	#service.services-container.service-list{
+		justify-content:space-around;
+	}
+	
+	#service.services-container.service-list.services-content{
+		
+		flex-basis:15%;
+		width:150px;
+		margin-right:5px;
+	}
+	#Skills .My-Skills-Content{
+		flex-direction: column;
+		margin:auto;
+	}
+	#skills.my-Skills-Content.Digital-skills{
+		margin-left:-350;
+	}
+	
+	#skills.my-Skills-Content.Digital-skills h3{
+		margin-left:400px;
+		width:500px;
+		
+	}
+}
+
+/*-------------media query for menu 500px-----------*/
+
+@media only screen and (max-width: 500px){
+	.row {
+		text-align: center;
+		
+	}
+	
+	.col-2 h1,p{
+		padding-left: 0px;
+	}
+	
+	.col-2 p{
+		margin-left: 0px;
+	}
+	
+	.col-2 img{
+		width: 65vw;
+		margin: 50px 0 0 0;
+	}
+	.col-2,
+	.col-3,
+	.col-4{
+		flex-basis: 100%;
+	}
+	
+	.cart-info p{
+		display: none;
+	}
+	
+	.small-container h1{
+		font-size: 20px;
+	}
+	
+	.small-container h1::before{
+		font-size: 2px;
+	}
+	
+	.small-container h1::after{
+		font-size: 2px;
+	}
+	
+	.col-3{
+		height: 495px;
+		min-width: 200px;
+
+	}
+	
+	.about-col-1{
+		display: none;
+	}
+	
+	.about{
+		width: 500px;
+		margin-left: -50px;
+	}
+	
+	.about .row{
+		
+		width: 500px;
+	}
+	
+	.about .row .about-col-2{
+	width: 500px;
+		
+}
+
+.about .row .about-col-2 h1 {
+	font-size: 35px;
+	margin-bottom: 5px;
+	width: 500px;
+}
+
+
+.about .row .about-col-2 p {
+	line-height: 20px;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 10px;
+	width: 500px;
+	padding: 0 5%;
+}
+
+	.about .row .about-col-2 .tab-titles{
+		margin-left: 60px;
+	}
+	.about .row .about-col-2 .tab-links{
+		margin-right: 20px;
+	font-size: 18px;
+	font-weight: 600px;
+	}
+	
+	
+	.services-content{
+	padding: 15px;
+	height: 350px;
+	
+   }
+	#service.service-conatiner h1{
+	
+	
+     font-size:35px;
+    
+	
+    }
+	.services-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    margin:auto;
+}
+	.services-content{
+		
+		margin:0;
+		
+	}
+	.services-content h2{
+		margin-top:10px;
+		
+	}
+	.services-content p{
+		margin-top:10px;
+		
+	}
+	.services-content a{
+		margin-top:10px;
+		
+	}
+	#Skills .My-Skills-Content{
+		flex-direction: column;
+		margin:auto;
+	}
+	#skills.my-Skills-Content.Digital-skills{
+		margin-left:-350;
+	}
+	
+	#skills.my-Skills-Content.Digital-skills h3{
+		margin-left:400px;
+		width:500px;
+		
+	}
+	#skills.Digital-skills.skill-bar{
+		width:400px;
+	}
+	
+	/* ---------------------grid works gallery-CSS Value- Start --------------*/
+
+
+
+.grid-wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+	margin-top: -150px;
+}
+
+.works-content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin:-50px;
+	margin-bottom: 50px;
+}
+
+.works-content h1{
+	font-size: 25px;
+	margin-top: 250px;
+}
+
+.filter-buttons{
+	display: none;
+}
+
+
+
+.grid-gallery {
+  width: 100%;
+	margin: 20px auto;
+	columns: 2;
+  grid-gap: 20px;
+}
+
+.grid-gallery .grid-item {
+  width: 100%;
+	margin-bottom: 20px;
+}
+
+.grid-gallery .grid-item img {
+  max-width: 100%;
+ border-radius: 15px;
+}
+
+.grid-gallery .grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-gallery .grid-item a {
+  cursor: zoom-in;
+}
+
+.grid-gallery .grid-item:nth-child(3n - 2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+
+/*---------------------- grid works gallery-CSS Value- End------------------*/
+}

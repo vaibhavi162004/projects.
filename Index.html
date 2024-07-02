@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portifoli-website</title>
+	<!---------- meta tag comment start---------->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!---------- meta tag comment End---------->
+	
+	<!---------- style sheets tag comment start---------->
+<link href="../css/style1.css" rel="stylesheet" type="text/css">
+	<!---------- style sheets tag comment end ----------->
+	
+	
+	<!---------- font-awsome icons tag comment start---------->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	<script src="https://use.fontawesome.com/df0c1b611e.js"></script>
+	<!---------- font-awsome icons tag comment end---------->
+	
+	<!------------------ Google Fonts CSS Link start-------------------->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<!------------------ Google Fonts CSS Link end -------------------->
+	
+	<!-- Lightbox CSS -->
+    <link rel="stylesheet" href="../media/lightbox2/lightbox2/dist/css/lightbox.min.css" />
+	
+	
+	<!------------------JS section-------------------------->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="../media/code check  folder/masonry-docs/js/masonry-docs.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+	<header id="Home">
+	  <div class="container">
+		<div class="navbar">
+			
+	  	  	<div class="logo">My Portfolio</div>
+			
+			<nav >
+        		<ul id="MenuItems">
+          			<li><a href="#Home-page">Home</a></li>
+          			<li><a href="#About">About</a></li>
+					<li><a href="#Services">service</a></li>
+          			<li><a href="#Skills">Skills</a></li>
+          			<li><a href="#Works">Works</a></li>
+          			<li><a href="#">Contacts</a></li>
+          		</ul>
+       	 	</nav>
+			
+			 <div class="menu-icon" onClick="menutoggle()">
+		  			<i class="fa fa-bars" aria-hidden="true"></i> 
+			</div>
+
+        </div>
+	</div>
+ </header>
+    <div class="banner" id="Home-page">
+      <div class="row">
+        <div class="col-2">
+          <h3>Hello, It's Me</h3>
+          
+          <h1>VAIBHAVI S H</h1>
+          
+          <h3>And I'm a <span class="multiple-text">CGI Artist</span></h3>
+          
+          <p>"Passionate CG Artist and 3D Architectural Visualizer with a keen eye for detail and a flair for creating stunning visual narratives. Proficient in transforming conceptual ideas into lifelike renderings that breathe life into architectural designs. Adept at utilizing cutting-edge software to craft immersive environments, striking interiors, and photorealistic exterior.</p>
+          
+          <div class="social-media">
+            
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+            
+            </div>
+          <button id="downloadBtn" class="download-btn" onclick="downloadCV()">
+            Download CV
+            </button> 
+          </div>
+        
+        <div class="col-2">
+          <img src="vaibhavi.png" width="50%" height="50%" alt=""/> 
+          </div>
+        </div>
+    </div>
+	
+	<!------------------About section-Start ------------------------->
+	
+     <section class="about" id="About">
+          <div class="row reveal">
+      <div class="about-col-1">
+        <img src="WhatsApp Image 2024-05-13 at 11.44.07 AM.png" width="50%" height="50%" alt=""/> 
+		</div>
+      
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+		<p >  I'm VAIBHAVI S H, a creative and detail-oriented graphic designer with a passion for transforming ideas into visually compelling designs. With a strong background in both digital and print media, I specialize in branding, web design, and illustration. </p>
+		  
+              <div class="tab-titles" >
+		  	<h3 class="tab-links active-link" onClick="opentab('skills')">Skills</h3>
+			<h3 class="tab-links" onClick="opentab('experience')">Experience</h3> 
+			<h3 class="tab-links" onClick="opentab('education')">Eduction</h3>
+			<h3 class="tab-links" onClick="opentab('language')">Language</h3>
+		  </div>
+		  
+	    <div class="tab-contents active-tab" id="skills">
+			<ul>
+				<li><span>Fine ART Skills</span><br>READING BOOKS </li>
+				<li><span>Graphic Design</span><br>Adobe Photoshop CC | Adobe Illustrator CC | Adobe Animate CC</li>
+				<li><span>Web Design</span><br>Adobe Dreamweaver CC | HTML | CSS | </li>
+				
+			</ul>
+		  
+		</div>
+		  <div class="tab-contents" id="experience">
+			<ul>
+				<li><span>2023CURRENT MYSURU, India</span><br>FRESHER </li>
+				
+			</ul>
+		  
+		</div>
+		  <div class="tab-contents" id="education">
+			<ul>
+				
+				<li><span>2023 – 2026 KARNATAKA,, India</span><br>Diploma In Animation From ANIFRAMES Colloge Of arts,Animation & MULTIMEDIA, MYSORE KARNATAKA</li>
+				
+				<li><span>2022– 2023 KARNATAKA,, India</span><br> PRE-UNIVERSITY COURSE(P.U.C) EXPERT COLLAGE,RANEBENNUR</li>
+				
+				<li><span>2021 - 2022 HAVERI DIST., KARNATAKA, , India</span><br>SECONDARY SCHOOL LEAVING CERTIFICATE (S.S.L.C.) KARNATAKA SECONDARY EDUCATION EXAMINATION BOARD, BENGALURU</li>
+				
+			</ul>
+		  
+		</div>
+		  <div class="tab-contents" id="language">
+			<ul>
+				<li><span>Mother Tongue</span><br>KANNADA - C2</li>
+				<li><span>National Language</span><br>HINDI - B2</li>
+				<li><span>Business Language</span><br>English - C1</li>
+				<li><span>Regional Language</span><br>KANNADA</li>
+				<li><span>Regional Language</span><br>LANGUAGE NAME</li>
+				
+			</ul>
+		  
+		</div>
+      </div>
+    </div>
+  </section>
+	
+		<!------------------About section-End ------------------------->
+	
+	<!------------------Services section-Start ------------------------->
+	
+	<section id="Services" >
+	  <div class="service-container reveal">
+		<h1 class="service-sub-title myservices">My Services</h1>
+			
+	  	<div class="services-list">
+          	<div class="services-content">
+				<img src="Graphic pic (1).png" width="80" height="80" alt=""/>
+				<h2 >Graphic Design</h2>
+            	<p>" Designing all kinds of Print related Artwork with suitable renderable formates and meeting industry standards" </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+			<div class="services-content">
+				<img src="web pic (1).png" width="80" height="80" alt=""/>
+            	<h2>Web Design</h2>
+            	<p>" stunning, Dynamic & Eye Pleasing Responsive Web Design using front-hand Programming. UI/UX templates and e-Commerse layouts using wordpress  " </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+			<div class="services-content">
+				<img src="Painting pic.png" width="80" height="80" alt=""/>
+            	<h2 >Archi. Design</h2>
+            	<p>" Creating space utility management blueprints using AutoCAD and Rendering Photorealistic & stunning - eye catchy 3d Architectural Visualization " </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+		  </div>
+		  
+		  <div class="services-list list2">
+          	<div class="services-content">
+				<img src="Motion pic (1).png" width="80" height="80" alt=""/>
+				<h2 >Motion Graphics</h2>
+            	<p>" Designing all kinds of animated visual interaction  suitable renderable formates and meeting industry standards" </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+			<div class="services-content">
+				<img src="VFX pic (1).png" width="80" height="80" alt=""/>
+            	<h2 style="font-size: 25px; text-align: center;">VFX & Compositing</h2>
+            	<p>" Stunning, Dynamic & Eye Pleasing photorealistic Tracking, roto, Match Move, Particle Dynamics and Matte painting " </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+			<div class="services-content">
+				<img src="Painting pic (3).png" width="80" height="80" alt=""/>
+            	<h2 style="font-size: 25px; text-align: center;">Painting </h2>
+            	<p>" Sketching, water-color, Oil-color, Acrylic-color, Charcoal painting, Clay, " </p>
+            	<a class="download-btn" href="#Contacts">Contact Now</a>
+			</div>
+			
+		  </div>
+      	</div>
+    </section>
+<!------------------Services section-End --------------------------->
+	
+	<!------------------ Skills section-Start --------------------------->
+<section id="Skills" class="reveal" >
+	
+	<h1 class="skill-title">MY SKILLS</h1>
+	
+
+	
+  <div class="My-Skills-Content">
+	  
+  <div class="Digital-skills">
+	  <h3 class= "skill-sub-title">Technical-Skills</h3>
+    <div class="skills ">
+      <div class="skill-name">Ps</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="95%" style="max-width: 95%"></div>
+        </div>
+      </div>
+    
+    <div class="skills">
+      <div class="skill-name">Ae</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="90%" style="max-width: 90%"></div>
+        </div>
+      </div>
+    
+    <div class="skills">
+      <div class="skill-name">Pr</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="80%" style="max-width: 80%"></div>
+        </div>
+      </div>
+    
+    <div class="skills">
+      <div class="skill-name">Au</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="75%" style="max-width: 75%"></div>
+        </div>
+      </div>
+    
+    <div class="skills">
+      <div class="skill-name">Nuke</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="70%" style="max-width: 70%"></div>
+        </div>
+      </div>
+	  
+	  <div class="skills">
+      <div class="skill-name">3ds Max</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="80%" style="max-width: 80%"></div>
+        </div>
+		  
+		  <div class="skills">
+      <div class="skill-name">V-ray</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="70%" style="max-width: 70%"></div>
+        </div>
+      </div>
+      </div>
+	  
+	  <div class="skills">
+      <div class="skill-name">Ai</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="70%" style="max-width: 70%"></div>
+        </div>
+      </div>
+	  
+	  <div class="skills">
+      <div class="skill-name">PSD</div>
+      <div class="skill-bar" >
+        <div class="skill-per" per="90%" style="max-width: 90%"></div>
+        </div>
+      </div>
+	  
+  </div>
+  
+    <div class="personal-skills" >
+      <h3 style="color: #FFFFFF;">Personal-Skills</h3>
+      <div class="wrap-container">
+      <div class="row">
+        <div class="container">
+          <div class="circular-progress-bar" data-end-value="75">
+            <span class="progress-value">0%</span>
+            </div>
+          <span class="per-text1">Creativity</span>
+        </div>
+        
+        <div class="container">
+          <div class="circular-progress-bar" data-end-value="80">
+            <span class="progress-value">0%</span>
+            </div>
+          <span class="per-text1">Communication</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="circular-progress-bar" data-end-value="100">
+            <span class="progress-value">0%</span>
+            </div>
+          <span class="per-text1">Teamwork</span>
+        </div>
+        
+        <div class="container">
+          <div class="circular-progress-bar" data-end-value="95">
+            <span class="progress-value">0%</span>
+            </div>
+          <span class="per-text1">Art Skills</span>
+        </div>
+      </div>
+      </div>
+  </div>
+	  
+	  </div>
+</section>
+<!------------------ Skills section-End --------------------------->
+	
+	<!------------------works gallery section-Start --------------------------->	
+	
+<section class="grid-wrapper reveal" id="Works" >
+  <div class="works-content">
+	<h1>My Works</h1>
+	  
+	  	<div class="filter-buttons">
+    		<button class="filter-button active" data-filter="All">All</button>
+    		<button class="filter-button" data-filter="Photography">Photo-Manipulation</button>
+    		<button class="filter-button" data-filter="Web-design">Web Designs</button>
+			<button class="filter-button" data-filter="Graphic-design">Graphic Designs</button>
+			<button class="filter-button" data-filter="VFX">Visual-FX </button>
+			<button class="filter-button" data-filter="Archi-design">Architectural Designs</button>
+			<button class="filter-button" data-filter="2d-design">2D Designs</button>
+			<button class="filter-button" data-filter="3d-design">3D Designs</button>
+  		</div>
+	  
+	</div>
+<div class="grid-gallery">
+    <div class="grid-item Photography">
+      <a href="girl.jpg" data-lightbox="gridImage">
+        <img src="girl.jpg" alt=""/>
+      </a>
+      </div>
+    <div class="grid-item Web-design">
+      <a href="greeting.jpg" data-lightbox="gridImage">
+        <img src="greeting.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item Graphic-design">
+      <a href="hand bill 2.jpg" data-lightbox="gridImage">
+        <img src="hand bill 2.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item VFX">
+      <a href="jewellery ad 2.jpg" data-lightbox="gridImage">
+        <img src="jewellery ad 2.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item Archi-design">
+      <a href="Leaflets 1.jpg" data-lightbox="gridImage">
+        <img src="Leaflets 1.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item 2d-design">
+      <a href="Untitled-1.jpg" data-lightbox="gridImage">
+        <img src="Untitled-1.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item 3d-design">
+      <a href="bus shelter.jpg" data-lightbox="gridImage">
+        <img src="bus shelter.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="sd.jpg" data-lightbox="gridImage">
+        <img src="sd.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-9.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-9.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-10.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-10.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-11.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-11.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-12.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-12.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-13.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-13.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-14.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-14.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-15.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-15.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-16.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-16.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-17.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-17.jpg" alt="" />
+      </a>
+      </div>
+    <div class="grid-item">
+      <a href="works gallery/img-18.jpg" data-lightbox="gridImage">
+        <img src="works gallery/img-18.jpg" alt="" />
+      </a>
+      </div>
+  </div>
+	
+	
+	</section>
+	
+	
+	<!------------------works gallery section-End--------------------------->
+
+	<footer>
+	
+	</footer>
+	
+	<!------------------tab content JS - section - start ------------------------->	
+	<script>
+  var tablinks = document.querySelectorAll(".tab-links");
+  var tabcontents = document.querySelectorAll(".tab-contents");
+
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+      tabcontent.style.opacity = 0; // Set opacity to 0 for all tab contents
+    }
+
+    var activeTabLink = document.querySelector(tab-links[onClick="opentab('${tabname}')"]);
+    activeTabLink.classList.add("active-link");
+
+    var activeTabContent = document.getElementById(tabname);
+    activeTabContent.classList.add("active-tab");
+
+    // Trigger a reflow to apply the transition
+    void activeTabContent.offsetWidth;
+
+    activeTabContent.style.opacity = 1; // Set opacity to 1 for the active tab content
+  }
+</script>
+	
+	<!---------- JS menu toggle comment start ---------->
+	
+	<script>
+	var MenuItems = document.getElementById("MenuItems");
+		MenuItems.style.maxHeight = "0px";
+		
+		function menutoggle() {
+			if (MenuItems.style.maxHeight == "0px")
+				{
+					MenuItems.style.maxHeight = "200px";
+				}
+			else
+				{
+					MenuItems.style.maxHeight = "0px";
+				}
+		}
+	</script>
+	<!---------- JS menu toggle comment end ---------->
+	
+	
+	<!---------- JS typed text comment - Start ---------->
+	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+	
+	  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('.multiple-text', {
+      strings: ['2D Artist', 'Graphic Designer','Web Designer', ' Painter',],
+      typeSpeed: 50,
+	  backspeed:100,
+	  backDelay:1000,
+	  loop: true	
+    });
+  </script>
+	<!---------- JS typed text comment - End ---------->
+	
+	
+	
+	<!---------- Download CV --- JS typed text comment - Start ---------->
+	<script>
+    function downloadCV() {
+        var downloadBtn = document.getElementById("downloadBtn");
+
+        // Update the path to your actual PDF file
+        var pdfPath = 'path/to/cv.pdf';
+
+        // Try to download the PDF
+        window.location.href = pdfPath;
+
+        // Optionally, you can add a class to indicate activation
+        downloadBtn.classList.add("active-btn");
+        downloadBtn.disabled = true; // You may want to disable the button after clicking
+
+        // Check the console for any errors
+        console.log('Attempting to download:', pdfPath);
+    }
+</script>
+	
+		<!---------- Download CV --- JS typed text comment - End ---------->
+	
+		<!------------------tab content JS - section - start ------------------------->	
+	<script>
+  var tablinks = document.querySelectorAll(".tab-links");
+  var tabcontents = document.querySelectorAll(".tab-contents");
+
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+      tabcontent.style.opacity = 0; // Set opacity to 0 for all tab contents
+    }
+
+    var activeTabLink = document.querySelector(tab-links[onClick="opentab('${tabname}')"]);
+    activeTabLink.classList.add("active-link");
+
+    var activeTabContent = document.getElementById(tabname);
+    activeTabContent.classList.add("active-tab");
+
+    // Trigger a reflow to apply the transition
+    void activeTabContent.offsetWidth;
+
+    activeTabContent.style.opacity = 1; // Set opacity to 1 for the active tab content
+  }
+</script>
+<!-------------------JS - Click reveal comment - Start------------------->
+	
+		<script type="text/javascript">
+		window.addEventListener('scroll', reveal);
+			
+			function reveal(){
+				var reveals = document.querySelectorAll('.reveal');
+				
+				for(var i = 0; i < reveals.length; i++){
+					
+					var windowheight = window.innerHeight;
+					var revealtop = reveals[i].getBoundingClientRect().top;
+					var revealpoint = 150;
+					
+					if(revealtop < windowheight - revealpoint){
+						
+						reveals[i].classList.add('active');}
+						else{
+						reveals[i].classList.remove('active');
+					}
+					
+				}
+			}
+	</script>
+	
+	<!-------------------JS - Click reveal comment - End------------------->
+	
+	<!-------------------JS - File-Root-Load - Start------------------->
+	<script src="12.mhtml"></script>
+	<script src="123.mhtml"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="../media/lightbox2/lightbox2/dist/js/lightbox.min.js"></script>
+	
+</body>
+</html>
