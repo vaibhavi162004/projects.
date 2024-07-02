@@ -1,74 +1,65 @@
-const board = document.getElementById('board');
+let timer;
+let isRunning = false;
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+
+const display = document.getElementById('display');
+const startBtn = document.getElementById('startStopBtn');
+const pauseBtn = document.getElementById('pauseBtn');
 const resetBtn = document.getElementById('resetBtn');
-const message = document.getElementById('message');
-const playWithAI = document.getElementById('playWithAI');
 
-let cells = [];
-let currentPlayer = 'X';
-let gameActive = true;
-
-const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
-
-function initializeGame() {
-    cells = Array(9).fill(null);
-    board.innerHTML = '';
-    cells.forEach((cell, index) => {
-        const cellElement = document.createElement('div');
-        cellElement.classList.add('cell');
-        cellElement.addEventListener('click', () => handleCellClick(index));
-        board.appendChild(cellElement);
-    });
-    message.textContent = `Player ${currentPlayer}'s turn`;
-    gameActive = true;
+function updateDisplay() {
+    display.textContent = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
-function handleCellClick(index) {
-    if (cells[index] || !gameActive) return;
-
-    cells[index] = currentPlayer;
-    board.children[index].textContent = currentPlayer;
-
-    if (checkWin()) {
-        gameActive = false;
-        message.textContent = `It'z ${currentPlayer} win!`;
-        return;
-    }
-
-    if (cells.every(cell => cell)) {
-        gameActive = false;
-        message.textContent = 'It\'s a tie!';
-        return;
-    }
-
-    currentPlayer = currentPlayer === 'X' ? 'Y' : 'X';
-    message.textContent = `Player ${currentPlayer}'s turn`;
-
-    if (playWithAI.checked && currentPlayer === 'X') {
-        aiMove();
+function start() {
+    if (!isRunning) {
+        timer = setInterval(() => {
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+            updateDisplay();
+        }, 1000);
+        isRunning = true;
+        startBtn.textContent = 'Pause';
     }
 }
 
-function checkWin() {
-    return winningConditions.some(condition => {
-        return condition.every(index => cells[index] === currentPlayer);
-    });
+function pause() {
+    if (isRunning) {
+        clearInterval(timer);
+        isRunning = false;
+        startBtn.textContent = 'Start';
+    }
 }
 
-function aiMove() {
-    let emptyCells = cells.map((cell, index) => cell === null ? index : null).filter(val => val !== null);
-    let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-    handleCellClick(randomIndex);
+function reset() {
+    clearInterval(timer);
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    isRunning = false;
+    updateDisplay();
+    startBtn.textContent = 'Start';
 }
 
-resetBtn.addEventListener('click', initializeGame);
+startBtn.addEventListener('click', () => {
+    if (isRunning) {
+        pause();
+    } else {
+        start();
+    }
+});
 
-initializeGame();
+resetBtn.addEventListener('click', reset);
+
+updateDisplay();
+
