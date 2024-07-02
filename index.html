@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=8.0">
-    <title>Stopwatch</title>
-    <link rel="stylesheet" href="style.css">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive landing page</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
 <body>
-    <div class="stopwatch">
-        <h1>STOP-TIMER</h1>
-        <div id="display">00:00:00</div>
+    <div class="navbar">
+        <div class="nav-menu">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#service" >SERVICE</a>
+            <a href="#contact">CONTACT US</a>
+            <a href="#info">INFO</a>
+        
+        </div>
+    </div>
+    <div class="change-menu">
+        <section class="section" id="home">HOME</section>
+        <section class="section" id="about">ABOUT</section>
+        <section class="section" id="service">SERVICE</section>
+        <section class="section" id="contact">CONTACT</section>
+        <section class="section" id="info">INFO</section>
 
-        <button id="startStopBtn">Start</button>
-        <button id="resetBtn">Reset</button>
     </div>
     <script src="main.js"></script>
 </body>
